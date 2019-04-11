@@ -1,0 +1,21 @@
+{
+  "name": "scy/shorturl",
+  "description": "This is a shorturl demo",
+  "type": "library",
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "scy1030503929",
+      "email": "1030503929@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "ShortUrl\\ShortUrl\\": "src/ShortUrl/ShortUrl"
+    }
+  }
+}
