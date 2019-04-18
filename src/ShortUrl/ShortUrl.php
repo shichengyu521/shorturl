@@ -24,21 +24,13 @@ class ShortUrl
     public static function shortUrl($long_url = '')
     {
         if (!$long_url) {
-            return self::toJson(404, 'failed', '');
+            return '';
         }
         $app_key = 'c5faa6d67402859b6366ada95671c017';
         $long_url = urlencode($long_url);
         $url = "http://www.mynb8.com/api2/sina?appkey=" . $app_key . "&long_url=" . $long_url;
-        $json = file_get_contents($url);
-        $url = json_decode(stripslashes($json), true);
-        return self::toJson(0,'success',$url['short_url']);
-    }
-
-    public function toJson($code = 0, $msg = '', $url = '')
-    {
-        $result['code'] = $code;
-        $result['msg'] = $msg;
-        $result['url'] = $url;
-        return $result;
+        $result = file_get_contents($url);
+        $result = json_decode($result,true);
+        return $result['short_url'];
     }
 }
