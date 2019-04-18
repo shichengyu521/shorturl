@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ShortUrl\\ShortUrl\\": "src/ShortUrl/ShortUrl"
+      "ShortUrl\\": "src/ShortUrl"
     }
   }
 }
